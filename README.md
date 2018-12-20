@@ -1,23 +1,28 @@
 # unit-test-demo
 
 #### 介绍
-基于Junit/TestNG + JMockit 的单元测试demo
+基于Junit + JMockit 的单元测试demo
 
-#### 软件架构
-软件架构说明
+后续待支持：基于TestNG + JMockit 的单元测试demo
+
+包含案例如下：
+案例一：Mock类
+案例二：Mock实例
+案例三：Mock接口
+案例四：Mock Spring Bean
+案例五：Mock MQ消息生产者
+案例六：Mock Dubbo消费Bean
 
 
-#### 安装教程
+#### JMockit是什么
 
-1. xxxx
-2. xxxx
-3. xxxx
 
-#### 使用说明
+JMockit是一款Java类/接口/对象的Mock工具，目前广泛应用于Java应用程序的单元测试中。
 
-1. xxxx
-2. xxxx
-3. xxxx
+JMockit的特点
+JMockit的API易用，丰富！
+JMockit提供了注解，并支持对类/对象的属性，方法，构造函数，初始代码块(含静态初始代码块)进行灵活Mock。(注：支持static,private,public,final,native方法的Mock)
+注：JMockit的本质是对java字节码的修改。通俗一点的讲就是在类的某个方法中加入某段逻辑达到Mock的目的。
 
 #### 参与贡献
 
