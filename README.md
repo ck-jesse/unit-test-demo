@@ -1,11 +1,11 @@
 # unit-test-demo
 
 #### 介绍
-基于Junit + JMockit 的单元测试demo
+本demo目前为基于Junit + JMockit 的单元测试demo！
 
-后续待支持：基于TestNG + JMockit 的单元测试demo
+后续待支持：基于TestNG + JMockit 的单元测试demo！
 
-包含案例如下：
+包含但不限于如下案例：
 1. 案例一：Mock类
 2. 案例二：Mock实例
 3. 案例三：Mock接口
@@ -23,6 +23,10 @@ JMockit的特点
 JMockit的API易用，丰富！
 JMockit提供了注解，并支持对类/对象的属性，方法，构造函数，初始代码块(含静态初始代码块)进行灵活Mock。(注：支持static,private,public,final,native方法的Mock)
 注：JMockit的本质是对java字节码的修改。通俗一点的讲就是在类的某个方法中加入某段逻辑达到Mock的目的。
+
+ **JMockit的详细使用可参考JMockit中文网：http://jmockit.cn/** 
+ **非常感谢大伟的无私贡献！！：** 
+
 
 #### 参与贡献
 
