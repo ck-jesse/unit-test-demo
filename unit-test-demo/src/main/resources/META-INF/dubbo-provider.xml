@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+	        http://code.alibabatech.com/schema/dubbo
+	        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 提供方应用信息, 用于计算依赖关系 -->
+    <dubbo:application name="unit-test-provider"/>
+
+    <!-- 使用DUBBO协议在20880端口暴露订单模块服务 -->
+    <dubbo:protocol name="dubbo" port="20880"/>
+
+    <!-- openApi 注册中心 -->
+    <dubbo:registry id="unitTestRegistry" address="zookeeper://localhost:2181" client="zkclient" check="false"/>
+
+    <!-- 暴露服务 -->
+    <dubbo:service interface="com.touna.test.OrderFacade" ref="orderFacade" registry="unitTestRegistry"/>
+
+</beans>
