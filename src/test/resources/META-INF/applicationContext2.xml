@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd"
+       default-autowire="byName">
+
+    <!-- 1个普通的spring bean -->
+    <bean id="userService" class="com.touna.test.UserServiceImpl"/>
+
+    <!-- 订单服务 -->
+    <bean id="orderFacade" class="com.touna.test.OrderFacadeImpl"></bean>
+
+    <!-- 消息生产者 -->
+    <bean id="mqProducer" class="com.alibaba.rocketmq.client.producer.DefaultMQProducer"
+          lazy-init="true" init-method="start" destroy-method="shutdown">
+        <constructor-arg value="test_producer" index="0"></constructor-arg>
+        <property name="namesrvAddr" value="127.0.0.1:9876"></property>
+    </bean>
+
+    <!-- 注意：测试的时候，可以不注册dubbo提供者bean，此时可以直接debug本地的提供者bean了 -->
+    <!-- dubbo提供者bean -->
+    <!--<import resource="dubbo-provider.xml"/>-->
+
+    <!-- dubbo消费bean -->
+    <import resource="dubbo-consumer.xml"/>
+</beans>
