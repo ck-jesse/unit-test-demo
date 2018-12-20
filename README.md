@@ -6,12 +6,12 @@
 后续待支持：基于TestNG + JMockit 的单元测试demo
 
 包含案例如下：
-案例一：Mock类
-案例二：Mock实例
-案例三：Mock接口
-案例四：Mock Spring Bean
-案例五：Mock MQ消息生产者
-案例六：Mock Dubbo消费Bean
+1. 案例一：Mock类
+2. 案例二：Mock实例
+3. 案例三：Mock接口
+4. 案例四：Mock Spring Bean
+5. 案例五：Mock MQ消息生产者
+6. 案例六：Mock Dubbo消费Bean
 
 
 #### JMockit是什么
