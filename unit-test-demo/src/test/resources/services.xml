@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+    <service name="MissionService">
+        <home-api>com.touna.test.mission.MissionService</home-api>
+        <home-class>com.touna.test.mission.MissionServiceImpl</home-class>
+    </service>
+</root>

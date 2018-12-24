@@ -5,6 +5,7 @@ import mockit.Expectations;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -32,5 +33,7 @@ public class SpringBeanMockingByExpectationsTest {
             }
         };
         Assert.assertTrue(userService.checkUser(userId));
+
+        MockHttpServletRequest request = new MockHttpServletRequest();
     }
 }

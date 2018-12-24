@@ -28,6 +28,7 @@ public class OrderServiceMockingByMockUpTest {
         Assert.assertTrue(result.getData());
     }
 
+
     @BeforeClass
     public static void beforeClassMethods() throws Throwable {
         // 必须在Spring容器初始化前，就对Spring Bean的类做MockUp

@@ -26,7 +26,7 @@
         <property name="namesrvAddr" value="127.0.0.1:9876"></property>
     </bean>
 
-    <!-- 注意：测试的时候，可以不注册dubbo提供者bean，此时可以直接debug本地的提供者bean了 -->
+    <!-- 注意：测试的时候，可以不注册dubbo提供者bean，这时既可以直接debug本地的提供者bean了 -->
     <!-- dubbo提供者bean -->
     <!--<import resource="dubbo-provider.xml"/>-->
 

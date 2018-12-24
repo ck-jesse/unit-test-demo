@@ -6,8 +6,6 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 /**
- * Junit的异常测试
- *
  * @Author chenck
  * @Date 2018/12/13 16:33
  */
@@ -27,8 +25,7 @@ public class ExpectExceptionTest {
     @Test
     public void test2() {
         thrown.expect(IllegalArgumentException.class);
-//        thrown.expectMessage("canVote age should be +ve");
-        thrown.expectMessage("canVote1 年龄应该大于0");
+        thrown.expectMessage("canVote age should be +ve");
 
         Student student = new Student();
         student.canVote1(0);

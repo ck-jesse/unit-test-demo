@@ -14,9 +14,6 @@ import org.junit.Test;
 public class InterfaceMockingByExpectationsTest {
 
     // 待测试的对象
-    // 如果该对象没有赋值，JMockit会去实例化它，若@Tested的构造函数有参数，
-    // 则JMockit通过在测试属性&测试参数中查找@Injectable修饰的Mocked对象注入@Tested对象的构造函数来实例化，
-    // 不然，则用无参构造函数来实例化。除了构造函数的注入，JMockit还会通过属性查找的方式，把@Injectable对象注入到@Tested对象中。
     @Tested
     OrderService orderService;
 
@@ -39,7 +36,6 @@ public class InterfaceMockingByExpectationsTest {
         };
         Assert.assertEquals(1001, userService.getUserId());
         Assert.assertEquals("张三疯", userService.getUserName());
-
     }
 
     // 通过JMockit注入

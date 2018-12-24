@@ -7,13 +7,13 @@ package com.touna.test;
 public class Student {
 
     public boolean canVote(int age) {
-        if (age <= 0) throw new IllegalArgumentException("canVote 年龄应该大于0");
+        if (age <= 0) throw new IllegalArgumentException("canVote age should be +ve");
         if (age < 18) return false;
         else return true;
     }
 
     public boolean canVote1(int age) {
-        if (age <= 0) throw new IllegalArgumentException("canVote1 年龄应该大于0");
+        if (age <= 0) throw new IllegalArgumentException("canVote1 age should be +ve");
         if (age < 18) return false;
         else return true;
     }

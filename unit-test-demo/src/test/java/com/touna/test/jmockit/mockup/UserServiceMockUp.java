@@ -1,6 +1,6 @@
-package com.touna.test.springboot.mockup;
+package com.touna.test.jmockit.mockup;
 
-import com.touna.test.springboot.UserService;
+import com.touna.test.UserService;
 import mockit.Invocation;
 import mockit.Mock;
 import mockit.MockUp;

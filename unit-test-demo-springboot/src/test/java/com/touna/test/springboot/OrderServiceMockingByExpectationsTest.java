@@ -33,7 +33,7 @@ public class OrderServiceMockingByExpectationsTest {
                 // result = true;
                 // 方式二：定制返回结果
                 result = new Delegate() {
-                    Boolean delegate11(Invocation inv, long userId) {
+                    Boolean delegate(Invocation inv, long userId) {
                         // 指定值才走mock
                         if (userId == testUserId) {
                             System.out.println("当userId=" + testUserId + "时，checkUser返回定制结果返回true");
@@ -46,7 +46,7 @@ public class OrderServiceMockingByExpectationsTest {
             }
         };
         OrderDTO orderDTO = new OrderDTO();
-//        orderDTO.setUserId(111222);
+        orderDTO.setUserId(111222);
         orderDTO.setUserId(testUserId);
         Result<Boolean> result = orderService.submitOrderByDTO(orderDTO);
         Assert.assertTrue(result.getData());

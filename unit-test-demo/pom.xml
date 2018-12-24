@@ -20,12 +20,12 @@
 
         <jmock-version>1.36</jmock-version>
         <junit-version>4.12</junit-version>
-        <spring-version>3.2.4.RELEASE</spring-version>
+        <!--<spring-version>3.2.4.RELEASE</spring-version>-->
+        <spring-version>4.3.0.RELEASE</spring-version>
         <dubbo-version>2.7.0-SNAPSHOT</dubbo-version>
         <rocketmq-version>3.2.6</rocketmq-version>
         <fastjson-version>1.2.4</fastjson-version>
-
-        <mybatis.version>3.4.0</mybatis.version>
+        <mission-invoke.version>0.0.2-SNAPSHOT</mission-invoke.version>
 
     </properties>
 
@@ -61,6 +61,12 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring-version}</version>
         </dependency>
@@ -74,18 +80,22 @@
             <artifactId>spring-jdbc</artifactId>
             <version>${spring-version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <artifactId>servlet-api</artifactId>
             <groupId>javax.servlet</groupId>
-            <version>2.5</version>
-        </dependency>
-
-
+            <version>3.0.1</version>
+        </dependency>-->
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>${mybatis.version}</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
         </dependency>
+        <!--<dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>3.0-alpha-1</version>
+            <scope>provided</scope>
+        </dependency>-->
 
         <!-- dubbo 依赖 -->
         <dependency>
@@ -108,6 +118,20 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${fastjson-version}</version>
+        </dependency>
+
+        <!-- 用于测试servlet，如mission框架 -->
+        <dependency>
+            <groupId>httpunit</groupId>
+            <artifactId>httpunit</artifactId>
+            <version>1.7</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mission</groupId>
+            <artifactId>mission-invoke</artifactId>
+            <version>${mission-invoke.version}</version>
         </dependency>
 
     </dependencies>
@@ -159,9 +183,10 @@
                         <!--<skip>true</skip>-->
 
                         <!-- jmockit 代码覆盖率功能 -->
+                        <!--
                         <disableXmlReport>true</disableXmlReport>
-                        <!--<argLine>-Dcoverage-metrics=all,jmockit-coverage-classes=com.touna.test.UserServiceImpl</argLine>-->
                         <argLine>-Dcoverage-metrics=all</argLine>
+                        -->
                     </configuration>
                 </plugin>
             </plugins>

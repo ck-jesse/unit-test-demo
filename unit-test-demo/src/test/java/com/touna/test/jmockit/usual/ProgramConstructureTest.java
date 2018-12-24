@@ -5,7 +5,6 @@ import mockit.Expectations;
 import mockit.Mocked;
 import mockit.Verifications;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 /*
@@ -33,10 +32,6 @@ public class ProgramConstructureTest {
             }
         };
         // 重放(Replay)
-//        Boolean msg = orderFacadeImpl.submitOrder(userId, productId);
-//        Assert.assertEquals(true, msg);
-
-        OrderFacadeImpl orderFacadeImpl = new OrderFacadeImpl();
         Boolean msg = orderFacadeImpl.submitOrder(userId, productId);
         Assert.assertEquals(true, msg);
         // 验证(Verification)
@@ -52,7 +47,6 @@ public class ProgramConstructureTest {
     }
 
     /* orderFacadeImpl 是一个测试参数 */
-    @Ignore
     @Test
     public void test2(@Mocked final OrderFacadeImpl orderFacadeImpl ) {
         // 录制(Record)

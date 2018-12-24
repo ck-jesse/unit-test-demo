@@ -35,11 +35,6 @@ public class InstanceMockingByExpectationsTest {
         Assert.assertEquals(21, instance.ordinaryMethod());
         Assert.assertEquals(31, instance.finalMethod());
 
-        // 另一个实例
-        // AnOrdinaryClass instance1 = new AnOrdinaryClass();
-        // Assert.assertEquals(21, instance1.ordinaryMethod());
-        // Assert.assertEquals(31, instance1.finalMethod());
-
         // 用Expectations无法mock native方法
         Assert.assertEquals(4, instance.navtiveMethod());
         // 用Expectations无法mock private方法

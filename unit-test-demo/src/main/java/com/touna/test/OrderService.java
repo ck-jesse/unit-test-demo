@@ -1,5 +1,7 @@
 package com.touna.test;
 
+import javax.annotation.Resource;
+
 /**
  * @Author chenck
  * @Date 2018/12/12 16:54
@@ -7,7 +9,7 @@ package com.touna.test;
 public class OrderService {
 
     // 用户服务(本地service)
-//    @Resource
+    @Resource
     UserService userService;
 
     public Result<Boolean> submitOrderByDTO(OrderDTO orderDTO) {

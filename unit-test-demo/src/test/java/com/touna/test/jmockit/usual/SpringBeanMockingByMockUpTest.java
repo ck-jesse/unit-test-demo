@@ -26,8 +26,8 @@ public class SpringBeanMockingByMockUpTest {
     @Test
     public void testSpringBeanMockingByMockUp() {
         Assert.assertTrue(userService.checkUser(111222));
-//        Assert.assertTrue(userService.checkUser(testUserId));
-//        Assert.assertEquals("张三疯", userService.getUserName());
+        Assert.assertTrue(userService.checkUser(testUserId));
+        Assert.assertEquals("张三疯", userService.getUserName());
     }
 
     @BeforeClass
@@ -40,7 +40,6 @@ public class SpringBeanMockingByMockUpTest {
     // 此处Mock实现类UserServiceImpl，而不是Mock接口UserService
     // public static class UserServiceMockUp extends MockUp<UserServiceImpl> {
 
-    // Mock泛型
     // 注：SpringBean 的Mock接口时，需要采用MockUp泛型的方式来实现
     public static class UserServiceMockUp<T extends UserService> extends MockUp<T> {
         @Mock
