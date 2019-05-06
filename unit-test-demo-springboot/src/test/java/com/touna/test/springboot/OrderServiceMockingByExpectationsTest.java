@@ -6,6 +6,7 @@ import mockit.Invocation;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -13,6 +14,7 @@ import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@SpringBootApplication
 public class OrderServiceMockingByExpectationsTest {
 
     static long testUserId = 123456L;

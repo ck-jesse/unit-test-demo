@@ -134,6 +134,15 @@
             <version>${mission-invoke.version}</version>
         </dependency>
 
+        <!-- spring-session-redis -->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+            <version>2.1.5.RELEASE</version>
+            <!--<type>pom</type>-->
+        </dependency>
+
+
     </dependencies>
 
     <build>

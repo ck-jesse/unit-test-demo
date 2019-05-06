@@ -7,9 +7,6 @@ import com.touna.test.jmockit.mockup.DubboConsumerBeanMockUp;
 import com.touna.test.jmockit.mockup.MailFacadeConsumerMockUp;
 import com.touna.test.jmockit.mockup.RocketMQProducerMockUp;
 import com.touna.test.jmockit.mockup.UserServiceImplConsumerMockUp;
-import mockit.Delegate;
-import mockit.Expectations;
-import mockit.Invocation;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -75,7 +72,7 @@ public class DubboConsumerBeanMockingTest1 {
 
     @Test
     public void testSubmitOrder() {
-        new Expectations(orderFacade, userService) {
+        /*new Expectations(orderFacade, userService) {
             {
                 // 定制返回结果
                 orderFacade.submitOrder(anyLong, anyLong);
@@ -107,7 +104,7 @@ public class DubboConsumerBeanMockingTest1 {
                     }
                 };
             }
-        };
+        };*/
         Assert.assertTrue(orderFacade.submitOrder(testUserId, testProductId));
         Assert.assertTrue(orderFacade.submitOrder(111222L, testProductId));
     }
