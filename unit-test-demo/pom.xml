@@ -16,7 +16,7 @@
 
         <jmockit.version>1.36</jmockit.version>
         <testng.version>6.8</testng.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
 
         <jmock-version>1.36</jmock-version>
         <junit-version>4.12</junit-version>
