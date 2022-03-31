@@ -21,7 +21,7 @@
         <jmock-version>1.36</jmock-version>
         <junit-version>4.12</junit-version>
         <!--<spring-version>3.2.4.RELEASE</spring-version>-->
-        <spring-version>4.3.17.RELEASE</spring-version>
+        <spring-version>5.3.18</spring-version>
         <dubbo-version>2.7.0-SNAPSHOT</dubbo-version>
         <rocketmq-version>3.2.6</rocketmq-version>
         <fastjson-version>1.2.31</fastjson-version>
